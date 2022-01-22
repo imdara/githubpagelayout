@@ -1,102 +1,119 @@
-#header {
+/* this is to remove additional margin space added by browser by default */
+* {
+    margin: 0;
+  }
+  
+  #header {
     background-color:rgb(37, 56, 61);
     color:white;
     letter-spacing:5px;
     text-align: left;
     padding : 30px;
-}
-
-h1 {
+  }
+  
+  h1 {
     text-align: center;
-}
-
-#img1 {
+  }
+  
+  #img1 {
     position:absolute;
-}
-
-body {
+  }
+  
+  body {
     background-color:rgb(225, 230, 211);
-}
-
-#container {
+    font-family: "Helvetica Neue",Helvetica,Arial;
+  }
+  
+  #container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: stretch;
-}
-
-#container2 {
+    justify-content: space-between;
+  }
+  .left {
+    width: 28%;
+  }
+  .right {
+    width: 68%;
+    box-sizing: border-box;
+  }
+  #container2 {
     display: flex;
     flex-flow: row wrap;
-    justify-content: stretch;
-}
-
-.item1 {
+    margin: 85px 0;
+    justify-content: space-around;
+  }
+  
+  .item1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: left;
-    height: 570px;
-    width: 300px;
+    height: 100%;
+    width: 100%;
     margin: 20px;
     margin-top :70px;
     border-radius: 15px;
     background-color: rgb(44, 44, 44);
-}
-
-.item2 {
+  }
+  .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item2 {
     display: flex;
     flex-direction: column;
     color: rgb(216, 206, 206);
     letter-spacing:3px;
     height: 75px;
-    width: 630px;
-    margin: 20px;
-    margin-left: 270px;
+    width: 60%;
     margin-top :70px;
     border-radius: 15px;
-    padding: 15px;
-    padding-left: 20px;
     font-size: 25px;
     background-color: rgb(44, 44, 44);
-}
-
-.item3 {
+    padding:15px;
+    padding-bottom:0px;
+  }
+  
+  .item3, .item4, .item5 {
     display: flex;
     flex-direction: row;
     height: 150px;
-    width: 250px;
-    margin: 70px;
+    width: 30%;
     border-radius: 15px;
     background-color: rgb(44, 44, 44);
-}
-
-.item4 {
-    display: flex;
-    flex-direction: row;
-    height: 150px;
-    width: 250px;
-    margin: 70px;
-    border-radius: 15px;
-    background-color: rgb(44, 44, 44);
-}
-
-.item5 {
-    display: flex;
-    flex-direction: row;
-    height: 150px;
-    width: 250px;
-    margin: 70px;
-    border-radius: 15px;
-    background-color: rgb(44, 44, 44);
-}
-
-.item6 {
+  }
+  
+  .item6 {
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 150px;
-    width: 1030px;
-    margin: 20px 20px 20px 70px;
+    width: 97%;
+    margin-left: 15px;
     border-radius: 15px;
     background-color: rgb(44, 44, 44);
-}
+  }
+  
+  @media screen and (max-width: 480px) {
+    #container2 {
+      flex-direction: column;
+      flex-flow: wrap;
+      width: 100%;
+    }
+    .item3, .item4, .item5, .item1 {
+      width: 100%;
+      margin-top: 10px;
+    }
+     .left, .right {
+      width: 100%;
+      margin: 10px;
+    }
+    .item1 {
+      margin: 0;
+      height: 100px;
+    }
+    .item2, #container2 {
+      margin-top: 0;
+    }
+  }
